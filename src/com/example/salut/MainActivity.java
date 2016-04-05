@@ -47,8 +47,25 @@ public class MainActivity extends Activity {
 		if (id == R.id.action_settings) {
 			return true;
 		}
-		if (id == R.id.action_favorite) {
+		if (id == R.id.action_textmirror) {
 			toaster();
+			Intent intent = new Intent(this, PalindromeActivity.class);
+			startActivity(intent);
+			return true;
+		}
+		if (id == R.id.action_pied) {
+			Intent intent = new Intent(this, PiedActivity.class);
+			startActivity(intent);
+			return true;
+		}
+		if (id == R.id.action_contacts) {
+			Intent intent = new Intent(this, ContactsActivity.class);
+			startActivity(intent);
+			return true;
+		}
+		if (id == R.id.action_animaux) {
+			Intent intent = new Intent(this, AnimalListActivity.class);
+			startActivity(intent);
 			return true;
 		}
 		return super.onOptionsItemSelected(item);

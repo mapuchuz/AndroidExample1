@@ -3,12 +3,30 @@
 
       <!-- "Mark Favorite", should appear as action button if possible -->
     <item
-        android:id="@+id/action_favorite"
+        android:id="@+id/action_pied"
         android:icon="@drawable/ic_favorite_black_48dp"
-        android:title="@string/action_favorite"
+        android:title="@string/action_pied"
         android:showAsAction="ifRoom"
       />
-
+    <item
+        android:id="@+id/action_textmirror"
+        android:icon="@drawable/ic_favorite_black_48dp"
+        android:title="@string/action_textmirror"
+        android:showAsAction="ifRoom"
+      />
+    <item
+        android:id="@+id/action_contacts"
+        android:icon="@drawable/ic_favorite_black_48dp"
+        android:title="@string/action_contacts"
+        android:showAsAction="ifRoom"
+      />
+    <item
+        android:id="@+id/action_animaux"
+        android:icon="@drawable/ic_favorite_black_48dp"
+        android:title="@string/action_animaux"
+        android:showAsAction="ifRoom"
+      />
+    
     <!-- Settings, should always be in the overflow -->
     <item android:id="@+id/action_settings"
           android:title="@string/action_settings"
