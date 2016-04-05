@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Salut</string>
+    <string name="hello_world">Salut le Monde !</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_pied">PiedActivity</string>
+    <string name="button_send">C\'est le Pied !</string>
+    <string name="bonjour_monde">A pied ou à cheval</string>
+    <string name="button_retour">Retour</string>
+    <string name="title_activity_palindrome">PalindromeActivity</string>
+    <string name="button_palin">PalinDroma</string>
+    <string name="hello_palin">Entrez un texte pour voir son palindrome</string>
+    <string name="title_activity_contacts">ContactsActivity</string>
+    <string name="button_contacts">Vers les contacts</string>
+    <string name="title_activity_details">DetailsActivity</string>
+    <string name="title_animal_list">Animals</string>
+    <string name="title_animal_detail">Animal Detail</string>
+    <string name="button_animals">Animaux</string>
+    <string name="button_video">Vidéo</string>
+    <string name="title_activity_video">VideoActivity</string>
+    <string name="action_favorite">FavoR</string>
+
+</resources>

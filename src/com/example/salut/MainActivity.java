@@ -1,5 +1,6 @@
 package com.example.salut;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -26,13 +27,14 @@ public class MainActivity extends Activity {
 	    Button button = (Button)findViewById(R.id.button_send);
 	    // Register the onClick listener with the implementation above
 	    button.setOnClickListener(mCorkyListener);
+	    
 
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
+		getMenuInflater().inflate(R.menu.actionbar, menu);
 		return true;
 	}
 
@@ -43,6 +45,10 @@ public class MainActivity extends Activity {
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
 		if (id == R.id.action_settings) {
+			return true;
+		}
+		if (id == R.id.action_favorite) {
+			toaster();
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
@@ -62,8 +68,18 @@ public class MainActivity extends Activity {
 		startActivity(intent);	
 	}
 	
+	public void gotoAnimals(View view) {
+		Intent intent = new Intent(this, AnimalListActivity.class);
+		startActivity(intent);	
+	}
+	
+	public void gotoVideo(View view) {
+		Intent intent = new Intent(this, VideoActivity.class);
+		startActivity(intent);	
+	}
+	
 	public void toaster() {
-		Context context = getApplicationContext();
+		Context context =  getApplicationContext();
 		CharSequence text = "Hello toast!";
 		int duration = Toast.LENGTH_SHORT;
 
