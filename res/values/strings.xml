@@ -23,5 +23,19 @@
     <string name="action_pied">Pied</string>
     <string name="action_contacts">Contacts</string>
         <string name="action_animaux">Animaux</string>
-    
+   
+        
+
+    <string-array name="planets_array">
+        <item>Pied</item>
+        <item>Contacts</item>
+        <item>Vidéo</item>
+        <item>Palindrome</item>
+    </string-array>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="action_websearch">Web search</string>
+    <string name="app_not_available">Sorry, there\'s no web browser available</string>
+        
+        
 </resources>
