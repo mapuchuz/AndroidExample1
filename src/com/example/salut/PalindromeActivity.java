@@ -30,7 +30,6 @@ public class PalindromeActivity extends Activity {
 
 	    private CharSequence mDrawerTitle;
 	    private CharSequence mTitle;
-	    private String[] mPlanetTitles;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -41,15 +40,7 @@ public class PalindromeActivity extends Activity {
 		monTexte.addTextChangedListener( mTextListener );
 		
         mTitle = mDrawerTitle = getTitle();
-        mPlanetTitles = getResources().getStringArray(R.array.planets_array);
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        mDrawerList = (ListView) findViewById(R.id.left_drawer);
-
-        // set up the drawer's list view with items and click listener
-        mDrawerList.setAdapter(new ArrayAdapter<String>(this,
-                R.layout.drawer_list_item, mPlanetTitles));
-        mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
-
+        
         // enable ActionBar app icon to behave as action to toggle nav drawer
         getActionBar().setDisplayHomeAsUpEnabled(true);
         getActionBar().setHomeButtonEnabled(true);
@@ -119,41 +110,6 @@ public class PalindromeActivity extends Activity {
 	};
 
 	
-	  /* The click listner for ListView in the navigation drawer */
-    private class DrawerItemClickListener implements ListView.OnItemClickListener {
-        @Override
-        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            selectItem(position);
-        }
-    }
-
-    private void selectItem(int position) {
-        // update the main content by replacing fragments
-    	if (position == 0) {
-			Intent intent = new Intent(this, PiedActivity.class);
-			startActivity(intent);
-		}
-
-      	if (position ==1) {
-      				Intent intent = new Intent(this, ContactsActivity.class);
-			startActivity(intent);
-		}
-     	if (position ==2) {
-			Intent intent = new Intent(this, VideoActivity.class);
-			startActivity(intent);
-		}
-     	if (position ==3) {
-			Intent intent = new Intent(this, PalindromeActivity.class);
-			startActivity(intent);
-		}
-	
-
-    	
-    	// update selected item and title, then close the drawer
-        mDrawerList.setItemChecked(position, true);
-        setTitle(mPlanetTitles[position]);
-        mDrawerLayout.closeDrawer(mDrawerList);
-    }
 
     @Override
     public void setTitle(CharSequence title) {
